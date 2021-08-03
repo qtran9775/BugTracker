@@ -35,7 +35,7 @@
             this.showPassword = new System.Windows.Forms.CheckBox();
             this.txtpassword = new System.Windows.Forms.TextBox();
             this.password = new System.Windows.Forms.Label();
-            this.userName = new System.Windows.Forms.TextBox();
+            this.txtUserName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -50,6 +50,7 @@
             this.label4.Size = new System.Drawing.Size(151, 27);
             this.label4.TabIndex = 23;
             this.label4.Text = "Create Account";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -72,6 +73,7 @@
             this.button1.TabIndex = 21;
             this.button1.Text = "CLEAR";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // register
             // 
@@ -83,6 +85,7 @@
             this.register.TabIndex = 20;
             this.register.Text = "LOGIN";
             this.register.UseVisualStyleBackColor = false;
+            this.register.Click += new System.EventHandler(this.register_Click);
             // 
             // showPassword
             // 
@@ -94,6 +97,7 @@
             this.showPassword.TabIndex = 19;
             this.showPassword.Text = "Show Password";
             this.showPassword.UseVisualStyleBackColor = true;
+            this.showPassword.CheckedChanged += new System.EventHandler(this.showPassword_CheckedChanged);
             // 
             // txtpassword
             // 
@@ -101,6 +105,7 @@
             this.txtpassword.Location = new System.Drawing.Point(283, 179);
             this.txtpassword.Multiline = true;
             this.txtpassword.Name = "txtpassword";
+            this.txtpassword.PasswordChar = '.';
             this.txtpassword.Size = new System.Drawing.Size(399, 22);
             this.txtpassword.TabIndex = 16;
             // 
@@ -114,14 +119,14 @@
             this.password.TabIndex = 15;
             this.password.Text = "Password";
             // 
-            // userName
+            // txtUserName
             // 
-            this.userName.BackColor = System.Drawing.SystemColors.Menu;
-            this.userName.Location = new System.Drawing.Point(283, 127);
-            this.userName.Multiline = true;
-            this.userName.Name = "userName";
-            this.userName.Size = new System.Drawing.Size(399, 22);
-            this.userName.TabIndex = 14;
+            this.txtUserName.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtUserName.Location = new System.Drawing.Point(283, 127);
+            this.txtUserName.Multiline = true;
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(399, 22);
+            this.txtUserName.TabIndex = 14;
             // 
             // label2
             // 
@@ -157,7 +162,7 @@
             this.Controls.Add(this.showPassword);
             this.Controls.Add(this.txtpassword);
             this.Controls.Add(this.password);
-            this.Controls.Add(this.userName);
+            this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -178,7 +183,7 @@
         private System.Windows.Forms.CheckBox showPassword;
         private System.Windows.Forms.TextBox txtpassword;
         private System.Windows.Forms.Label password;
-        private System.Windows.Forms.TextBox userName;
+        private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
     }
