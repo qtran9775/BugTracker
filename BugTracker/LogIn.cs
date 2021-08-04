@@ -18,7 +18,7 @@ namespace BugTracker
             InitializeComponent();
         }
 
-        OleDbConnection con = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=userData.mdb");
+        readonly OleDbConnection con = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=userData.mdb");
         OleDbCommand cmd = new OleDbCommand();
         OleDbDataAdapter da = new OleDbDataAdapter();
 
@@ -31,7 +31,7 @@ namespace BugTracker
 
             if(dr.Read() == true)
             {
-                new DashBoard().Show();
+                new mainPage().Show();
                 this.Hide();
             }
             else
